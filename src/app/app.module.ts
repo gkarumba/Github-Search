@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { UserProfileServiceService } from '../app/service/user-profile-service.service';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -16,7 +17,7 @@ import { UserProfileDetailsComponent } from './components/user-profile-details/u
     BrowserModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [UserProfileServiceService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
