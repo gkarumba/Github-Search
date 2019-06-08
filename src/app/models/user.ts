@@ -5,9 +5,10 @@ export class User {
     public followers: number,
     public following: number,
     public repos: number,
-    public stars: number,
+    public profileUrl: string,
     public projects: number,
-    public profilePic: string
+    public profilePic: string,
+    public location: string
   ) {
     this.showDetails = false;
   }

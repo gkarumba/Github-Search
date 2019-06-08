@@ -2,8 +2,9 @@ export class Repos {
   constructor(
     public repoName: string,
     public repoDescription: string,
-    public following: number,
-    public languages: string
+    public repoUrl: string,
+    public language: string,
+    public createdOn: string,
   ) {
   }
 }
