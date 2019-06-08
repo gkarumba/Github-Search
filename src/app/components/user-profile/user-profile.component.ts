@@ -11,11 +11,13 @@ import { Repos } from '../../models/repos';
 })
 export class UserProfileComponent implements OnInit {
 
-  user: User;
+  users: User;
   repo: Repos;
   constructor(private userProfileService: UserProfileServiceService) { }
-    
   ngOnInit() {
+    this.userProfileService.getUserProfile();
+    this.users = this.userProfileService.user;
+    console.log(this.users);
   }
 
 }
