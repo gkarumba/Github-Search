@@ -19,5 +19,8 @@ export class UserProfileComponent implements OnInit {
     this.users = this.userProfileService.user;
     console.log(this.users);
   }
+  showRepos() {
+    this.users.showDetails = !this.users.showDetails;
+  }
 
 }

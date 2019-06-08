@@ -29,7 +29,7 @@
     <div class="col-md-8 user-info">
       <div class="list row">
           <div class="col-md-3">
-              <p class="list-inline-item d-flex align-items-center" (click)='showRepos'>View Repos </p>
+              <p class="list-inline-item d-flex align-items-center" (click)='showRepos()'>View Repos </p>
           </div>
         <div class="col-md-3">
             <p class="list-inline-item d-flex align-items-center">Followers<span class="badge badge-secondary badge-pill">{{users.followers}}</span></p>
@@ -40,6 +40,9 @@
         <div class="col-md-3">
           <p class="list-inline-item d-flex align-items-center">Repositories<span class="badge badge-secondary badge-pill">{{users.repos}}</span></p>
         </div>
+      </div>
+      <div class="row">
+        <app-user-profile-details *ngIf='users.showDetails'></app-user-profile-details>
       </div>
     </div>
   </div>
