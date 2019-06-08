@@ -1,0 +1,11 @@
+.form {
+  display: flex;
+  text-align: center;
+  justify-content: end;
+}
+.profile{
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  margin: 20px;
+}
