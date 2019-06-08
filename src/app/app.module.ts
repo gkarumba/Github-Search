@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
 import { UserProfileServiceService } from '../app/service/user-profile-service.service';
 import { FormsModule } from '@angular/forms';
+import { MatProgressBarModule } from '@angular/material/progress-bar';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -19,7 +20,8 @@ import { UserProfileDetailsComponent } from './components/user-profile-details/u
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    MatProgressBarModule
   ],
   providers: [UserProfileServiceService],
   bootstrap: [AppComponent]
