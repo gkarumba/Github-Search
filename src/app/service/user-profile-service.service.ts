@@ -35,7 +35,7 @@ export class UserProfileServiceService {
         location: string;
       }
       const promise = new Promise((resolve, reject) => {
-        this.http.get<UserResponse>(`https://api.github.com/users/${this.username}/?access_token=environment.apiKey`).toPromise().then(response => {
+        this.http.get<UserResponse>(`https://api.github.com/users/${this.username}?access_token=`+environment.apiKey).toPromise().then(response => {
           this.user.username = response.login;
           this.user.followers = response.followers;
           this.user.following = response.following;
