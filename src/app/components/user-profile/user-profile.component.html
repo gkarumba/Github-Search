@@ -1,12 +1,12 @@
 <nav class="navbar navbar-fixed-top navbar-light bg-dark">
   <div class="row">
-    <div class="col-md-2">
+    <div class="col-md-5">
       <a class="navbar-brand" routerLinkActive="active" routerLink="home"><img src="https://img.icons8.com/ios/50/000000/github.png"></a>
     </div>
-    <div class="col-md-9 form">
+    <div class="col-md-7 form">
         <form >
           <div class="form-group">
-            <input class="form-control mr-sm-2 " type="search" placeholder="Search" aria-label="Search">
+            <input class="form-control" type="search" placeholder="Search GitHub users with username" name="username" [(ngModel)]="username" (keyup)='findUser()'>
           </div>
         </form>
     </div>
@@ -19,10 +19,10 @@
         <img src="{{users.profilePic}}" alt="" srcset="">
       </div><br>
       <div class="name">
-        <h2>{{users.username}}</h2>
+        <h2><img src="https://img.icons8.com/material/24/000000/name.png"><span class="name-item">{{users.username}}</span></h2>
       </div>
       <div class="location">
-        <h4>Location <span class="location-item">{{users.location}}</span></h4>
+        <h4><img src="https://img.icons8.com/material/24/000000/marker.png"><span class="location-item">{{users.location}}</span></h4>
       </div>
       <button type="button" class="btn btn-outline-secondary">View On Github <a href="{{users.profileUrl}}" target="_blank"></a></button>
     </div>

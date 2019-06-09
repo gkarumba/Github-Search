@@ -11,13 +11,18 @@ import { Repos } from '../../models/repos';
 })
 export class UserProfileComponent implements OnInit {
 
-  users: User;
-  repo: Repos;
+  public users: User;
+  public repo: Repos;
+  public username: string;
+
   constructor(private userProfileService: UserProfileServiceService) { }
   ngOnInit() {
     this.userProfileService.getUserProfile();
     this.users = this.userProfileService.user;
     console.log(this.users);
+  }
+  findUser() {
+
   }
   showRepos() {
     this.users.showDetails = !this.users.showDetails;

@@ -1,7 +1,5 @@
 .form {
-  display: flex;
-  text-align: center;
-  justify-content: end;
+  margin-top: 15px
 }
 .body-profile{
   margin: 20px;
