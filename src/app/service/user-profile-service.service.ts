@@ -35,7 +35,7 @@ export class UserProfileServiceService {
         location: string;
       }
       const promise = new Promise((resolve, reject) => {
-        this.http.get<UserResponse>(`https://api.github.com/users/${this.username}?access_token=`+environment.apiKey).toPromise().then(response => {
+        this.http.get<UserResponse>(`https://api.github.com/users/${this.username}?access_token=` + environment.apiKey).toPromise().then(response => {
           this.user.username = response.login;
           this.user.followers = response.followers;
           this.user.following = response.following;
@@ -68,14 +68,26 @@ export class UserProfileServiceService {
         language: string;
         created_at: string;
       }
+      let repos = [];
       const promise = new Promise((resolve, reject) => {
-        this.http.get<UserRepo>(`https://api.github.com/users/${this.username}/repos`).toPromise().then(response => {
-          this.repo.repoName = response.name;
-          this.repo.repoDescription = response.description;
-          this.repo.repoUrl = response.url;
-          this.repo.language = response.language;
-          this.repo.createdOn = response.created_at;
-          resolve();
+        this.http.get<UserRepo>(`https://api.github.com/users/${this.username}/repos?access_token=` + environment.apiKey).toPromise().then(response => {
+        const o = response;
+        const ol = Object.keys(o);
+        // let responses = response;
+        for (let i = 0; i < ol.length; i++) {
+          this.repo = new Repos(
+            response[i].name,
+            response[i].description,
+            response[i].svn_url,
+            response[i].language,
+            response[i].created_at
+          );
+          repos.push(this.repo);
+          // this.repo = new Repos('', '', '', '', '');
+          console.log(repos);
+        }
+
+        resolve();
         },
         error => {
           this.repo.repoName = 'unavailable';
@@ -86,7 +98,7 @@ export class UserProfileServiceService {
           reject(error);
         });
       });
-      return promise;
+      return repos;
     }
   }
 

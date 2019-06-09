@@ -6,7 +6,7 @@
     <div class="col-md-7 form">
         <form >
           <div class="form-group">
-            <input class="form-control" type="search" placeholder="Search GitHub users with username" name="username" [(ngModel)]="username" (keyup)='findUser()'>
+            <input class="form-control" type="search" placeholder="Search GitHub users with username" name="username" [(ngModel)]="username" (keyup)='findUser()'size="55">
           </div>
         </form>
     </div>
@@ -24,7 +24,7 @@
       <div class="location">
         <h4><img src="https://img.icons8.com/material/24/000000/marker.png"><span class="location-item">{{users.location}}</span></h4>
       </div>
-      <button type="button" class="btn btn-outline-secondary">View On Github <a href="{{users.profileUrl}}" target="_blank"></a></button>
+      <a href="{{users.profileUrl}}" target="_blank"><button type="button" class="btn btn-outline-secondary">View On Github </button></a>
     </div>
     <div class="col-md-8 user-info">
       <div class="list row">
@@ -42,7 +42,7 @@
         </div>
       </div>
       <div class="row">
-        <app-user-profile-details *ngIf='users.showDetails'></app-user-profile-details>
+        <app-user-profile-details *ngIf='users.showDetails' [repos]='repo'></app-user-profile-details>
       </div>
     </div>
   </div>

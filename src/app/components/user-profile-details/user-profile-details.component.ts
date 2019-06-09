@@ -7,7 +7,7 @@ import { Repos } from '../../models/repos';
 })
 export class UserProfileDetailsComponent implements OnInit {
 
-  @Input() repo: Repos;
+  @Input() repos: Repos;
   constructor() { }
 
   ngOnInit() {

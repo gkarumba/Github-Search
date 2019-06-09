@@ -12,7 +12,7 @@ import { Repos } from '../../models/repos';
 export class UserProfileComponent implements OnInit {
 
   public users: User;
-  public repo: Repos;
+  repo: {};
   public username: string;
 
   constructor(private userProfileService: UserProfileServiceService) { }
@@ -24,7 +24,10 @@ export class UserProfileComponent implements OnInit {
     this.userProfileService.getUserProfile();
     this.users = this.userProfileService.user;
     console.log(this.users);
+    this.repo = this.userProfileService.getUserRepo();
+    console.log(this.repo);
   }
+
   showRepos() {
     this.users.showDetails = !this.users.showDetails;
   }

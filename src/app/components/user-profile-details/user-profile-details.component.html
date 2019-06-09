@@ -1,7 +1,7 @@
-<div class="row">
+<div class="row" *ngFor='let repo of repos'>
   <div class="display-repo">
     <div class="repo-name">
-      <h2><a href="{{repo.repoUrl}}" target="_blank">{{repo.repoName}}</a></h2>
+      <a href="{{repo.repoUrl}}" target="_blank"><h2>{{repo.repoName}}</h2></a>
     </div>
     <div class="repo-description">
       <p>{{repo.repoDescription}}</p>
