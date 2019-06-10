@@ -10,13 +10,15 @@ import { AppComponent } from './app.component';
 import { UserProfileComponent } from './components/user-profile/user-profile.component';
 import { UserProfileDetailsComponent } from './components/user-profile-details/user-profile-details.component';
 import { HighlightDirective } from './directives/highlight.directive';
+import { DateCountPipe } from './pipes/date-count.pipe';
 
 @NgModule({
   declarations: [
     AppComponent,
     UserProfileComponent,
     UserProfileDetailsComponent,
-    HighlightDirective
+    HighlightDirective,
+    DateCountPipe
   ],
   imports: [
     BrowserModule,
