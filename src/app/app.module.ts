@@ -5,6 +5,7 @@ import { UserProfileServiceService } from '../app/service/user-profile-service.s
 import { FormsModule } from '@angular/forms';
 // import { MatProgressBarModule } from '@angular/material/progress-bar';
 
+import { RouterModule, Routes } from '@angular/router';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { UserProfileComponent } from './components/user-profile/user-profile.component';
