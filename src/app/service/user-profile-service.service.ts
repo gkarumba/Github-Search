@@ -14,6 +14,7 @@ export class UserProfileServiceService {
   public username: string;
   apiUrl: 'https://api.github.com/users//?access_token=';
   apiRepoUrl: 'https://api.github.com/users/${name}/repos';
+  apiKey: 'd9f2218496a8db4cea306c5d7a26eb7ddd6c68a5';
 
   constructor(private http: HttpClient) {
     this.user = new User('', 0, 0, 0, '', 0, '', '');
@@ -35,7 +36,7 @@ export class UserProfileServiceService {
         location: string;
       }
       const promise = new Promise((resolve, reject) => {
-        this.http.get<UserResponse>(`https://api.github.com/users/${this.username}?access_token=` + environment.apiKey).toPromise().then(response => {
+        this.http.get<UserResponse>(`https://api.github.com/users/${this.username}?access_token=` + this.apiKey).toPromise().then(response => {
           this.user.username = response.login;
           this.user.followers = response.followers;
           this.user.following = response.following;
@@ -70,7 +71,7 @@ export class UserProfileServiceService {
       }
       let repos = [];
       const promise = new Promise((resolve, reject) => {
-        this.http.get<UserRepo>(`https://api.github.com/users/${this.username}/repos?access_token=` + environment.apiKey).toPromise().then(response => {
+        this.http.get<UserRepo>(`https://api.github.com/users/${this.username}/repos?access_token=` + this.apiKey).toPromise().then(response => {
         const o = response;
         const ol = Object.keys(o);
         // let responses = response;
