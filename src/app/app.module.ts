@@ -9,12 +9,14 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { UserProfileComponent } from './components/user-profile/user-profile.component';
 import { UserProfileDetailsComponent } from './components/user-profile-details/user-profile-details.component';
+import { HighlightDirective } from './directives/highlight.directive';
 
 @NgModule({
   declarations: [
     AppComponent,
     UserProfileComponent,
-    UserProfileDetailsComponent
+    UserProfileDetailsComponent,
+    HighlightDirective
   ],
   imports: [
     BrowserModule,

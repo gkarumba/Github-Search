@@ -1,4 +1,7 @@
 .display-repo{
   border: 1px #333 solid;
   border-radius: 5px;
+  margin: 20px;
+  padding: 10px;
+  width: 430px;
 }
