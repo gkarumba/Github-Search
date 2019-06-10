@@ -5,6 +5,7 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 ## Description
 
 A simple WebApp that allows a user to search a userprofile on GitHub using the username.
+![homepage](https://github.com/gkarumba/Github-Search/blob/master/src/assets/Homepage.png)
 
 ## Built By
 
@@ -44,4 +45,4 @@ For any clarification or addition information, contact the author at gachegua@gm
 
 ## License
 
-This software is Licensed under MIT license Copyright (2019) [gkarumba](https://github.com/gkarumba/Quote-App/blob/master/LICENSE)
+This software is Licensed under MIT license Copyright (2019) [gkarumba](https://github.com/gkarumba/Github-Search/blob/master/LICENSE)
