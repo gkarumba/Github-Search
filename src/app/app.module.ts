@@ -12,6 +12,7 @@ import { UserProfileComponent } from './components/user-profile/user-profile.com
 import { UserProfileDetailsComponent } from './components/user-profile-details/user-profile-details.component';
 import { HighlightDirective } from './directives/highlight.directive';
 import { DateCountPipe } from './pipes/date-count.pipe';
+import { LoaderComponent } from './components/loader/loader.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { DateCountPipe } from './pipes/date-count.pipe';
     UserProfileComponent,
     UserProfileDetailsComponent,
     HighlightDirective,
-    DateCountPipe
+    DateCountPipe,
+    LoaderComponent
   ],
   imports: [
     BrowserModule,

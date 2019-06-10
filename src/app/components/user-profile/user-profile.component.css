@@ -4,6 +4,9 @@
 .body-profile{
   margin: 20px;
 }
+.navbar-brand{
+  color: aliceblue;
+}
 .image img{
   height: 250px;
   width: 250px;
